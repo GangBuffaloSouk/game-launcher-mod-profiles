@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+venv/
+.venv/
+env/
+ENV/
+
+# Rust/C++ build artifacts (native mod-hook helpers)
+target/
+*.o
+*.obj
+*.dll
+*.lib
+*.exp
+*.pdb
+
+# C# helpers
+bin/
+obj/
+*.user
+
+# Java helpers
+*.class
+*.jar
+.gradle/
+
+# Launcher runtime
+profiles/*.local.json
+logs/
+*.log
+crashdumps/
+mod_cache/
+injector_traces/
+launcher_state.db
+*.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.iml
+*.swp
+
+# Secrets
+.env
+*.pem
+config/credentials.toml
