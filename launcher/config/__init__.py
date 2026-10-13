@@ -1,0 +1,1 @@
+"""Configuration layer: paths, defaults, and profile schema constants."""
