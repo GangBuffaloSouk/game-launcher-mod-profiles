@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-launcher-mod-profiles"
+version = "0.6.3"
+description = "Windows desktop game launcher with per-game mod profiles and a pipeline that ingests, processes, and drives mod injection."
+readme = "CONTRIBUTING.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "the mod-profiles crew" }]
+keywords = ["game-launcher", "mods", "mod-profiles", "injector", "loader", "windows"]
+classifiers = [
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Operating System :: Microsoft :: Windows",
+  "Topic :: Games/Entertainment",
+]
+
+dependencies = [
+  "pydantic>=2.6",
+  "watchdog>=4.0",
+  "pywin32>=306; sys_platform == 'win32'",
+  "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.23", "ruff>=0.4", "black>=24.4", "mypy>=1.10"]
+
+[project.scripts]
+glmp = "launcher.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["launcher*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
