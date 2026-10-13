@@ -1,0 +1,1 @@
+"""Ingest handlers: turn raw inputs (profile files, mod archives, watch events) into jobs."""
